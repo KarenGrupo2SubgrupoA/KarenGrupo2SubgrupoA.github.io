@@ -19,6 +19,10 @@ body {
     box-sizing: border-box;
     padding: 70px 30px;
   }
+
+  #addItem{
+      padding: 15px 30px;
+  }
   
   .login-box .avatar {
     width: 100px;
