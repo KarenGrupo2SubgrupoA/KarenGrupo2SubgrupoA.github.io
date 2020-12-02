@@ -10,7 +10,7 @@
         <div class="row justify-content-center mt-5 p-2">
             <div >
                 <div class="card ">
-                    <img class="card-img-top" src="holder.js/100x180/" alt="">
+                    <img class="card-img-top" src="holder.js/100x200/" alt="">
                     <div class="login-box" id="addItem">
                         <h2>Editar producto</h2>
                         <form method="post" action="principal.html">
@@ -34,8 +34,8 @@
                              </div>
                                                                                                                        
                              <div class="form-group">
-                                  <input type="submit" id="editar" name="edit_button" value="Editar Producto">
-                                  <input type="submit" id="editar" name="delete_button" value="Eliminar Producto">
+                                  <input type="submit" id="editar" onclick="submitForm('principal.html')" value="Editar Producto">
+                                  <input type="submit" id="editar" onclick="submitForm('principal.html')" value="Eliminar Producto">
 
                               
                             </div>
@@ -49,10 +49,10 @@
   </body>
 </html>
 
-if (isset($_POST['edit_button'])) {
-    "principal.html"
-} else if (isset($_POST['delete_button'])) {
-   "principal.html"
-} else {
-    //no button pressed
-}
+<script>
+    function submitForm(action)
+    {
+        document.getElementById('columnarForm').action = action;
+        document.getElementById('columnarForm').submit();
+    }
+</script>
