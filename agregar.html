@@ -13,7 +13,7 @@
                     <img class="card-img-top" src="holder.js/100x180/" alt="">
                     <div class="login-box" id="addItem">
                         <h2>Añadir producto al inventario</h2>
-                        <form method="post">
+                        <form method="get" action="principal.html">
                             <div class="form-group">
                                 <label for="name">Nombre</label>
                                 <small id="helpName" class="form-text text-muted">Introduce el nombre del producto</small>
@@ -33,7 +33,7 @@
                                 class="form-control" name="qty" id="qty" aria-describedby="helpQty" placeholder="ej: 50" `required>
                             </div>
                             <div class="form-group" style="justify-content: center;">
-                              <a href="principal.html" id="agregar" style="background-color:#DEE1E6;color:#000" class="button">Agregar Producto</a>
+                              <input type="submit" id="editar" value="Agregar Producto">
                             </div>
                         </form>
                     </div>
