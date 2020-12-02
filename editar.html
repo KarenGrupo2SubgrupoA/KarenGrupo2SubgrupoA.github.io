@@ -34,8 +34,9 @@
                              </div>
                                                                                                                        
                              <div class="form-group">
-                                  <input type="submit" id="editar" value="Editar Producto">
-                                  <a href="principal.html" id="eliminar" style="background-color:#fa0c0c;color:#fff;width:200%;border-radius:200px;" class="btn btn-light">Eliminar Producto</a>
+                                  <input type="submit" id="editar" name="edit_button" value="Editar Producto">
+                                  <input type="submit" id="editar" name="delete_button" value="Eliminar Producto">
+
                               
                             </div>
                             
@@ -47,3 +48,11 @@
     </div>
   </body>
 </html>
+
+if (isset($_POST['edit_button'])) {
+    "principal.html"
+} else if (isset($_POST['delete_button'])) {
+   "principal.html"
+} else {
+    //no button pressed
+}
