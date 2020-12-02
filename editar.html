@@ -13,7 +13,7 @@
                     <img class="card-img-top" src="holder.js/100x200/" alt="">
                     <div class="login-box" id="addItem">
                         <h2>Editar producto</h2>
-                        <form method="GET">
+                        <form method="GET" action="principal.html">
                             <div class="form-group">
                                 <label for="name">Nombre</label>
                                 <small id="helpName" class="form-text text-muted">Introduce el nombre del producto</small>
@@ -34,10 +34,8 @@
                              </div>
                                                                                                                        
                              <div class="form-group">
-                                  <input type="submit" id="editar" onclick="submitForm('principal.html')" value="Editar Producto">
-                                  <input type="submit" id="editar" onclick="submitForm('principal.html')" value="Eliminar Producto">
-
-                              
+                                  <input type="submit" id="editar" value="Editar Producto">
+                                                           
                             </div>
                             
                         </form>
@@ -50,9 +48,4 @@
 </html>
 
 <script>
-    function submitForm(action)
-    {
-        document.getElementById('columnarForm').action = action;
-        document.getElementById('columnarForm').submit();
-    }
-</script>
+
