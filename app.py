@@ -4,11 +4,9 @@ import os
 import yagmail
 import inventory 
 
-
 app = Flask(__name__)
 
 app.secret_key = os.urandom(24)
-
 
 @app.route('/')
 def login():
@@ -31,8 +29,6 @@ def agregar():
 @app.route('/editar')
 def editar():
     return render_template('editar.html')
-
-
 
 
 if __name__ == '__main__':
