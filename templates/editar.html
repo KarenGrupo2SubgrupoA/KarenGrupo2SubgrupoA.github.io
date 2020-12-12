@@ -2,21 +2,18 @@
 <html>
   <head>
     <meta charset="utf-8">
-       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
     <title>Productos Grupo A | Subgrupo 2</title>
-    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/estilos.css')}}"/>
   </head>
   <body>
     <div class="container ">
         <div class="row justify-content-center mt-5 p-2">
             <div >
                 <div class="card ">
-                    <img class="card-img-top" src="holder.js/100x180/" alt="">
+                    <img class="card-img-top" src="holder.js/100x200/" alt="">
                     <div class="login-box" id="addItem">
-                        <h2>Añadir producto al inventario</h2>
-                        <form method="get" action="principal.html">
+                        <h2>Editar producto</h2>
+                        <form method="GET" action="{{url_for('principal')}}">
                             <div class="form-group">
                                 <label for="name">Nombre</label>
                                 <small id="helpName" class="form-text text-muted">Introduce el nombre del producto</small>
@@ -34,10 +31,16 @@
                                 <small id="helpQty" class="form-text text-muted">Introduce la cantidad</small>
                                 <input type="number"
                                 class="form-control" name="qty" id="qty" aria-describedby="helpQty" placeholder="ej: 50" `required>
+                             </div>
+                                                                                                                       
+                             <div class="form-group">
+                             <div class="row" style="justify-content: center;">
+                            <div class="column"><a href="{{url_for('principal')}}" id="editar"   class="EditButton">Editar Producto</a></div>
+                            <div class="column"><a href="{{url_for('principal')}}" id="eliminar" class="DeleteButton">Cancelar Edición</a></div>
+                              </div>
+                                                           
                             </div>
-                            <div class="form-group" style="justify-content: center;">
-                               <div class="column" style="justify-content: center;"><a href="principal.html" id="agregat"  class="AddButton">Agregar Producto</a></div>
-                            </div>
+                            
                         </form>
                     </div>
                 </div>
@@ -46,3 +49,6 @@
     </div>
   </body>
 </html>
+
+<script>
+
